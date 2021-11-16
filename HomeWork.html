@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Home Work</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js " crossorigin="anonymous"></script>
+    <style>
+        img {
+            width: 450px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id="Main"></main>
+
+
+    <script type="text/babel">
+        const Main = document.getElementById("Main");
+
+        // question num 1
+
+        function Hello() {
+            return <h1> hello </h1>
+        }
+
+
+
+        function Car() {
+            return (
+                <div>
+                    <h1>question num 2</h1>
+                    <h1>Mercedes-Benz</h1>
+                    <img src="https://carvin-info.com/wp-content/uploads/2019/05/mercedes_benz-vin-number.jpg" ></img>
+                </div>
+
+            )
+        }
+
+
+        function Name() {
+            return (
+                <div>
+                    <h1> question num 3</h1>
+                    <h1> Lior Yosef</h1>
+
+                </div>
+            )
+        }
+
+
+        function Hello4() {
+
+            return (
+                <div>
+                    <h1>question num 4</h1>
+                    <h1> hello </h1> <  Name />
+                </div>)
+        }
+
+        function Heder() {
+            return (
+                <div>
+                    <h1>question num 5</h1>
+                    <header> heder </header>
+                    <main> main </main>
+                    <footer> footer </footer>
+
+                </div>
+            )
+        }
+
+        function PropsName(props) {
+            return(
+                <div>
+                    <h1> question num 7 </h1>
+                    <h3>{props.name}</h3>
+                    
+                </div>
+            )
+        }
+
+        function NameAndAge(props) {
+            return(
+                <div>
+                    <h1>question num 8</h1>
+                    <h3>name:{props.name} age:{props.age}</h3>
+                    
+                </div>
+            )
+        }
+
+        function Img(props) {
+            return(
+                <section>
+                    <h1>question num 9</h1>
+                    <img src={props.link}></img>
+                    
+                </section>
+            )
+        }
+
+
+        
+        
+
+
+
+
+        function App() {
+            return (<article>
+
+                <  Hello />
+
+                <  Car />
+                <  Car />
+                <  Car />
+                <  Car />
+                <  Car />
+
+                <  Name />
+
+                <  Hello4 />
+
+                <  Heder />
+
+                <  PropsName name="lior" />
+                <  PropsName name="marcos" />
+                <  PropsName name="matan" />
+                <  PropsName name="haim" />
+                <  PropsName name="lior" />
+
+
+                <  NameAndAge name="lior" age="24" />
+                <  NameAndAge name="marcos" age="23" />
+                <  NameAndAge name="matan" age="25" />
+                <  NameAndAge name="armias" age="23" />
+
+                <  Img link="https://i.pinimg.com/564x/9d/a2/3b/9da23bf7c993d1b7348e2bc0d8f5a702.jpg" />
+                < Img link="https://i.pinimg.com/564x/9f/06/63/9f06636e5a0806f572a7623b68cd250e.jpg" />
+                < Img link="https://i.pinimg.com/564x/47/63/dd/4763dd873559443655738563b27833cd.jpg" />
+
+
+
+
+
+
+
+
+
+
+
+            </article>)
+        }
+
+        ReactDOM.render(
+
+            <App />, Main)
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
