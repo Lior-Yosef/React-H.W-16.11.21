@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secend React</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js " crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main id="secendMain"></main>
+
+
+    <script type="text/babel">
+
+        const secendMain = document.getElementById("secendMain");
+        function HelloWorld() {
+            return <h1>hello world</h1>
+        }
+        function RetutrnHello() {
+            return <div>  <h1> HELLO </h1>< RetutrnName /></div>
+
+
+        }
+
+        function RetutrnName() {
+            return <h1> hi LIOR </h1>
+        }
+
+        function Books() {
+
+            const Book = { name: "mi haziz at hgvina shli", year: 1998, price: "29.99 dollar" };
+            const Book2 = { name: "the vocie", year: 2022, price: "19.99 dollar" };
+            const Book3 = { name: "nagasBetz", year: 2019, price: "free price" };
+
+
+            return (<div>
+                <h1>{Book.name},{Book.year}, {Book.price}</h1>
+                <h1>{Book2.name},{Book2.year}, {Book2.price}</h1>
+                <h1>{Book3.name},{Book3.year}, {Book3.price}</h1>
+            </div>);
+
+        }
+
+        function Name(props) {
+            console.log(props);
+            return (
+                <div>
+                    <h1> name component</h1>
+                    <h1> {props.name} {props.lastName}</h1>
+                    <h3> {props.Book.year}</h3>
+
+                </div>
+            )
+        }
+
+        // < Books />
+
+        function App() {
+            const Book2 = { name: "the vocie", year: 2022, price: "19.99 dollar" };
+            return (
+                <section>
+                    < Name name="lior" Book={Book2} />
+                    < Name name="eily" lastName="yosef" Book={Book2} />
+                </section>
+                );
+        }
+
+        ReactDOM.render(< App />, secendMain)
+
+
+    </script>
+
+
+
+</body>
+
+</html>
